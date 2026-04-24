@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Trabajos - Novy Carpintería</title>
+
+<link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/tooplate-style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HEADER + NAV (IGUAL QUE INDEX) -->
+<section class="tm-section-head" id="top">
+
+<header id="header" class="header-pro">
+    <div class="container-header">
+        <img src="img/logo.png" alt="Novy Carpintería" class="logo-header">
+        <div class="header-text">
+            <p> - Cocinas, armarios y proyectos personalizados - </p>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar narbar-light">
+    <a class="navbar-brand tm-text-gray">Menu</a>
+
+    <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav">
+        <span class="navbar-toggler-icon">
+            <i class="fa fa-navicon tm-fa-toggler-icon"></i>
+        </span>
+    </button>
+
+    <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+                <a class="nav-link tm-text-gray" href="index.html">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link tm-text-gray active" href="galeria.html">Galería</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link tm-text-gray" href="index.html#tm-section-3">Servicios</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link tm-text-gray" href="index.html#tm-section-6">Contacto</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+</section>
+
+<!-- GALERÍA -->
+<section class="container mt-5 pt-5">
+
+<h2 class="text-center mb-5">Nuestros trabajos</h2>
+
+<div class="row">
+
+    <div class="col-md-4 col-6 mb-4">
+        <img src="img/turcas1.jpeg" class="img-fluid galeria-img">
+    </div>
+
+    <div class="col-md-4 col-6 mb-4">
+        <img src="img/turcas2.jpeg" class="img-fluid galeria-img">
+    </div>
+
+    <div class="col-md-4 col-6 mb-4">
+        <img src="img/turcas3.jpeg" class="img-fluid galeria-img">
+    </div>
+
+    <div class="col-md-4 col-6 mb-4">
+        <img src="img/turcas4.jpeg" class="img-fluid galeria-img">
+    </div>
+
+    <div class="col-md-4 col-6 mb-4">
+        <img src="img/turcas5.jpeg" class="img-fluid galeria-img">
+    </div>
+
+</div>
+
+</section>
+
+<!-- BOTÓN CTA -->
+<div class="hero-cta text-center">
+    <a href="index.html#tm-section-6" class="btn-cta">Solicita tu presupuesto</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="mt-5">
+    <p class="text-center">Copyright © NovyCarpinteria</p>
+</footer>
+
+</div>
+
+<!-- JS (IGUAL QUE INDEX) -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+    $('.nav-link').click(function () {
+        $('#mainNav').removeClass('show');
+    });
+</script>
+
+<a href="https://wa.me/34649390037" class="whatsapp-float" target="_blank">
+    <i class="fa fa-whatsapp"></i>
+</a>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.body.classList.add("fade-in");
+});
+</script>
+
+<script>
+document.querySelectorAll("a").forEach(link => {
+  const href = link.getAttribute("href");
+
+  // SOLO aplicar fade a páginas reales (no anchors #)
+  if (
+    link.hostname === window.location.hostname &&
+    href &&
+    !href.startsWith("#") &&
+    !href.includes("tel:") &&
+    !href.includes("wa.me")
+  ) {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      let url = this.href;
+
+      document.body.classList.remove("fade-in");
+
+      setTimeout(() => {
+        window.location = url;
+      }, 300);
+    });
+  }
+});
+</script>
+
+
+</body>
+</html>

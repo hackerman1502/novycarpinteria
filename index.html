@@ -77,6 +77,9 @@
                         <li class="nav-item">
                             <a class="nav-link tm-text-gray" href="#tm-section-2">Trabajos</a>
                         </li>
+<li class="nav-item">
+  <a class="nav-link tm-text-gray" href="galeria.html">Galeria</a>
+</li>
                         <li class="nav-item">
                             <a class="nav-link tm-text-gray" href="#tm-section-3">Servicios</a>
                         </li>
@@ -376,6 +379,39 @@
 <a href="https://wa.me/34649390037" class="whatsapp-float" target="_blank">
     <i class="fa fa-whatsapp"></i>
 </a>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.body.classList.add("fade-in");
+});
+</script>
+
+<script>
+document.querySelectorAll("a").forEach(link => {
+  const href = link.getAttribute("href");
+
+  // SOLO aplicar fade a páginas reales (no anchors #)
+  if (
+    link.hostname === window.location.hostname &&
+    href &&
+    !href.startsWith("#") &&
+    !href.includes("tel:") &&
+    !href.includes("wa.me")
+  ) {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      let url = this.href;
+
+      document.body.classList.remove("fade-in");
+
+      setTimeout(() => {
+        window.location = url;
+      }, 300);
+    });
+  }
+});
+</script>
+
 </body>
 
 </html>
