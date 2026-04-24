@@ -1055,3 +1055,87 @@ body.fade-in {
 .historia-box h3 {
   color: rgba(0, 0, 0, 0.55);
 }
+
+
+.reviews-rating {
+  color: #ccc;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+
+.review-stars {
+  color: #fbbc04; /* color estrellas Google */
+}
+
+/* CONTENEDOR */
+.reviews-wrapper {
+  padding: 80px 20px;
+}
+
+/* CAJA BLANCA */
+.reviews-box {
+  background: #ffffff;
+  padding: 50px 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* TITULO */
+.reviews-title {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/* SUBTEXTO */
+.reviews-rating {
+  color: #777;
+  margin-bottom: 40px;
+}
+
+/* TARJETAS */
+.review-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+/* TEXTOS */
+.review-name {
+  color: #222;
+}
+
+.review-card p {
+  color: #555;
+}
+
+/* ESTRELLAS */
+.review-stars {
+  color: #fbbc04;
+}
+
+.google-logo {
+  width: 100px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
