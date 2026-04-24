@@ -1029,3 +1029,9 @@ body.fade-in {
   margin-top: 50px;
   margin-bottom: 30px;
 }
+
+@media (max-width: 768px) {
+  .tm-section-2 {
+    margin-top: 40px;
+  }
+}
