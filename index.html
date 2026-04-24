@@ -84,6 +84,12 @@
                         <li class="nav-item">
                             <a class="nav-link tm-text-gray" href="#tm-section-3">Servicios</a>
                         </li>
+<li class="nav-item">
+                            <a class="nav-link tm-text-gray" href="quienes-somos.html">Quienes somos</a>
+                        </li>
+
+
+
 	 <li class="nav-item">
         <a class="nav-link tm-text-gray" href="#tm-section-6">Contacto</a>
     </li>
@@ -163,11 +169,11 @@
 
                 <div class="col-xl-4 col-lg-4 col-md-6 mb-lg-0 mb-md-5 mb-5 pr-md-5" data-aos="fade-up">
 <header class="text-center">
-                        <i class="fa fa-4x fa-wrench pl-5 pb-5 pr-5 pt-2"></i>
+                        <i class="fa fa-4x fa-plug pl-5 pb-5 pr-5 pt-2"></i>
                     </header>
 
-                    <h2>Montaje e instalación</h2>
-<p>Nos encargamos del montaje completo de cocinas, armarios y mobiliario, garantizando un acabado perfecto en cada detalle.</p>
+                    <h2>Equipamiento de cocina</h2>
+<p>Seleccionamos e instalamos electrodomésticos de alta calidad que combinan diseño, tecnología y eficiencia, adaptados a cada proyecto.</p>
                 </div>
             </div>
         </section>
@@ -391,28 +397,33 @@ document.addEventListener("DOMContentLoaded", function () {
 document.querySelectorAll("a").forEach(link => {
   const href = link.getAttribute("href");
 
-  // SOLO aplicar fade a páginas reales (no anchors #)
   if (
-    link.hostname === window.location.hostname &&
     href &&
     !href.startsWith("#") &&
-    !href.includes("tel:") &&
-    !href.includes("wa.me")
+    !href.startsWith("tel:") &&
+    !href.includes("wa.me") &&
+    !link.classList.contains("glightbox")
   ) {
     link.addEventListener("click", function(e) {
-      e.preventDefault();
-      let url = this.href;
 
-      document.body.classList.remove("fade-in");
+      // SOLO si es enlace a otra página real
+      if (this.href.includes(".html")) {
 
-      setTimeout(() => {
-        window.location = url;
-      }, 300);
+        e.preventDefault();
+        let url = this.href;
+
+        document.body.classList.remove("fade-in");
+
+        setTimeout(() => {
+          window.location.href = url;
+        }, 300);
+
+      }
+
     });
   }
 });
 </script>
-
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>

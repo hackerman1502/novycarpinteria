@@ -965,3 +965,56 @@ body.fade-in {
   transform: scale(1.05);
   filter: brightness(0.9);
 }
+
+.section-title {
+  text-align: center;
+  color: #888;
+  opacity: 0.70;
+  font-weight: 200;
+   font-size: 24px;
+  margin: 0 auto 40px auto;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #ccc;
+  margin: 10px auto 0;
+}
+
+.img-fade {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.img-fade img {
+  width: 100%;
+  display: block;
+}
+
+/* DIFUMINADO IZQUIERDA */
+.img-fade::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(to right, white, transparent);
+  z-index: 2;
+}
+
+/* DIFUMINADO DERECHA */
+.img-fade::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(to left, white, transparent);
+  z-index: 2;
+}
