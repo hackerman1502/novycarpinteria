@@ -1018,3 +1018,14 @@ body.fade-in {
   background: linear-gradient(to left, white, transparent);
   z-index: 2;
 }
+
+@media (max-width: 768px) {
+  .section-title {
+    margin-top: 50px;
+  }
+}
+
+.section-title {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
