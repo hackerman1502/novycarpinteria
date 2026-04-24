@@ -2,6 +2,7 @@
 <html>
 
 <head>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -141,8 +142,8 @@
 
         <section class="tm-section-2 tm-section-mb" id="tm-section-2">
             <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 mb-lg-0 mb-md-5 mb-5 pr-md-5">
-                    <header class="text-center">
+<div class="col-xl-4 col-lg-4 col-md-6 mb-lg-0 mb-md-5 mb-5 pr-md-5" data-aos="fade-up">                   
+ <header class="text-center">
                         <i class="fa fa-4x fa-cogs pl-5 pb-5 pr-5 pt-2"></i>
                     </header>
 
@@ -150,7 +151,7 @@
 <p>Nos encargamos del montaje completo de cocinas, armarios y mobiliario, garantizando un acabado perfecto en cada detalle.</p>
                    
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 mb-lg-0 mb-md-5 mb-5 pr-md-5">
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-lg-0 mb-md-5 mb-5 pr-md-5" data-aos="fade-up">
                     <header class="text-center">
                         <i class="fa fa-4x fa-cubes pl-5 pb-5 pr-5 pt-2"></i>
                     </header>
@@ -160,7 +161,7 @@
              
                 </div>
 
-                <div class="col-xl-4 col-lg-4 col-md-12">
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-lg-0 mb-md-5 mb-5 pr-md-5" data-aos="fade-up">
 <header class="text-center">
                         <i class="fa fa-4x fa-wrench pl-5 pb-5 pr-5 pt-2"></i>
                     </header>
@@ -176,7 +177,7 @@
     <div class="row">
 
         <!-- COCINAS -->
-        <div class="col-md-6 col-lg-3 mb-4">
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="zoom-in">
             <div class="tm-box-3 text-center">
                 <div class="img-circle">
                     <img src="img/cocinas.webp"/>
@@ -187,7 +188,7 @@
         </div>
 
         <!-- SALONES -->
-        <div class="col-md-6 col-lg-3 mb-4">
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="zoom-in">
             <div class="tm-box-3 text-center">
                 <div class="img-circle">
                     <img src="img/salones.webp"/>
@@ -198,7 +199,7 @@
         </div>
 
         <!-- BAÑOS -->
-        <div class="col-md-6 col-lg-3 mb-4">
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="zoom-in">
             <div class="tm-box-3 text-center">
                 <div class="img-circle">
                     <img src="img/banos.webp"/>
@@ -209,7 +210,7 @@
         </div>
 
         <!-- DORMITORIOS -->
-        <div class="col-md-6 col-lg-3 mb-4">
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="zoom-in">
             <div class="tm-box-3 text-center">
                 <div class="img-circle">
                     <img src="img/dormitorios.webp"/>
@@ -223,7 +224,7 @@
 </section>
 
 <section class="brands-section">
-  <div class="container text-center">
+  <div class="container text-center" "col-md-6 col-lg-3 mb-4" data-aos="zoom-in">
     
     <h2 class="brands-title">
       Trabajamos con las principales marcas de electrodomésticos
@@ -244,7 +245,7 @@
 <div class="fade-left"></div>
 <div class="fade-right"></div>
             <div class="row">
-                <div class="col-lg-7 col-md-7 col-xs-12 text-center">
+                <div class="col-lg-7 col-md-7 col-xs-12 text-center" data-aos="fade-right">
 
     <h2>Contacto</h2>
     <p>¿Hablamos sobre tu proyecto?</p>
@@ -264,7 +265,7 @@
     </div>
 
 </div>
-<div class="col-lg-5 col-md-5 col-xs-12">
+<div class="col-lg-5 col-md-5 col-xs-12" data-aos="fade-left">
     <iframe 
         src="https://www.google.com/maps?q=Rúa+Río+Salas+35+Ourense&output=embed"
         width="100%" 
@@ -410,6 +411,15 @@ document.querySelectorAll("a").forEach(link => {
     });
   }
 });
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1000, // velocidad animación
+    once: true // solo una vez (más pro)
+  });
 </script>
 
 </body>

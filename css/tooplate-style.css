@@ -955,3 +955,13 @@ body {
 body.fade-in {
   opacity: 1;
 }
+
+.galeria-img {
+  transition: 0.3s;
+  border-radius: 12px;
+}
+
+.galeria-img:hover {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}

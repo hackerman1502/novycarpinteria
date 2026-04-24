@@ -2,6 +2,7 @@
 <html>
 
 <head>
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -77,24 +78,29 @@
 <div class="row">
 
     <div class="col-md-4 col-6 mb-4">
-        <img src="img/turcas1.jpeg" class="img-fluid galeria-img">
-    </div>
+<a href="img/turcas1.jpeg" class="glightbox">
+  <img src="img/turcas1.jpeg" class="img-fluid galeria-img">
+</a>    </div>
 
     <div class="col-md-4 col-6 mb-4">
-        <img src="img/turcas2.jpeg" class="img-fluid galeria-img">
-    </div>
+<a href="img/turcas2.jpeg" class="glightbox">
+  <img src="img/turcas2.jpeg" class="img-fluid galeria-img">
+</a>    </div>
 
     <div class="col-md-4 col-6 mb-4">
-        <img src="img/turcas3.jpeg" class="img-fluid galeria-img">
-    </div>
+<a href="img/turcas3.jpeg" class="glightbox">
+  <img src="img/turcas3.jpeg" class="img-fluid galeria-img">
+</a>    </div>
 
     <div class="col-md-4 col-6 mb-4">
-        <img src="img/turcas4.jpeg" class="img-fluid galeria-img">
-    </div>
+<a href="img/turcas4.jpeg" class="glightbox">
+  <img src="img/turcas4.jpeg" class="img-fluid galeria-img">
+</a>    </div>
 
     <div class="col-md-4 col-6 mb-4">
-        <img src="img/turcas5.jpeg" class="img-fluid galeria-img">
-    </div>
+<a href="img/turcas5.jpeg" class="glightbox">
+  <img src="img/turcas5.jpeg" class="img-fluid galeria-img">
+</a>    </div>
 
 </div>
 
@@ -137,13 +143,14 @@ document.addEventListener("DOMContentLoaded", function () {
 document.querySelectorAll("a").forEach(link => {
   const href = link.getAttribute("href");
 
-  // SOLO aplicar fade a páginas reales (no anchors #)
+  // EXCLUIR galería + anchors + tel + whatsapp
   if (
     link.hostname === window.location.hostname &&
     href &&
     !href.startsWith("#") &&
     !href.includes("tel:") &&
-    !href.includes("wa.me")
+    !href.includes("wa.me") &&
+    !link.classList.contains("glightbox") // 🔥 ESTA ES LA CLAVE
   ) {
     link.addEventListener("click", function(e) {
       e.preventDefault();
@@ -158,7 +165,14 @@ document.querySelectorAll("a").forEach(link => {
   }
 });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
+<script>
+const lightbox = GLightbox({
+  touchNavigation: true,
+  loop: true
+});
+</script>
 
 </body>
 </html>
