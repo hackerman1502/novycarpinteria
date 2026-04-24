@@ -1035,3 +1035,23 @@ body.fade-in {
     margin-top: 40px;
   }
 }
+
+.historia-box {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .historia-box {
+    padding: 25px;
+  }
+}
+
+.historia-box h3 {
+  color: rgba(0, 0, 0, 0.55);
+}
